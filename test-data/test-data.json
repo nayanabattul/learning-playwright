@@ -1,0 +1,12 @@
+[
+    {
+        "username": "nayanabattul@gmail.com",
+        "password": "Welcome@123",
+        "validity": "valid"
+    },
+     {
+        "username": "nayanambattul@gmail.com",
+        "password": "Welcome@123",
+        "validity": "invalid"
+    }
+]
