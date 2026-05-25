@@ -14,8 +14,8 @@ export class NavbarPage{
         await this.navbarMenu(menu).click();
     }
 
-    async isVisible(menu:string): Promise<void>{
-        await this.navbarMenu(menu).isVisible();
+    async isNavbarVisible(menu:string): Promise<Boolean>{
+       return await this.navbarMenu(menu).isVisible();
     }
 
     // async isClicked(menu: string){

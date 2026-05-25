@@ -1,6 +1,6 @@
 export const qaConfig = {
     baseURL: "https://automationexercise.com/",
-    userName: "nayanabattul@gmail.com",
+    email: "nayanabattul@gmail.com",
     password: "Welcome@123",
     testUserFirstName: "",
     testUserLastName: "",

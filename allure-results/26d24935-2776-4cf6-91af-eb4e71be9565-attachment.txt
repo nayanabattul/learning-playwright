@@ -1,0 +1,7 @@
+[
+  {
+    username: 'nayanabattul@gmail.com',
+    password: 'Welcome@123',
+    validity: 'valid'
+  }
+]
