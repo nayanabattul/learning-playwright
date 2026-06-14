@@ -1,4 +1,16 @@
 import { defineConfig, devices } from '@playwright/test';
+import { 
+  ARGS,
+  FULLY_PARALLEL, 
+  HEADLESS, 
+  RETRIES,
+  SCREENSHOT_MODE, 
+  SLOWMO, 
+  TRACE_MODE, 
+  VIDEO_MODE, 
+  WORKERS 
+} from './src/config/constants/framework.constants';
+import { REPORTER_CONFIG } from './src/config/constants/report.constants';
 
 /**
  * Read environment variables from file.
@@ -13,20 +25,18 @@ import { defineConfig, devices } from '@playwright/test';
  */
 export default defineConfig({
   testDir: './tests',
-  fullyParallel: true,
-  retries: 0,
-  workers: 1,
-  reporter: [
-    ["html", {open: "never"}], ["allure-playwright"], 
-  ],
+  fullyParallel: FULLY_PARALLEL,
+  retries: RETRIES,
+  workers: WORKERS,
+  reporter: REPORTER_CONFIG,
   use: {
-    headless: false,
-    screenshot: "only-on-failure",
-    video: "retain-on-failure",
-    trace: 'on-first-retry',
+    headless: HEADLESS,
+    screenshot: SCREENSHOT_MODE,
+    video: VIDEO_MODE,
+    trace: TRACE_MODE,
     launchOptions: {
-      args: ["--start-maximized"],
-      slowMo: 500
+      args: ARGS,
+      slowMo: SLOWMO
     }
   },
 
