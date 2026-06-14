@@ -6,7 +6,18 @@ on:
     branches: [ main, master ]
   schedule:
     - cron: '*/15 * * * *'
-  workflow_dispatch: {}
+  workflow_dispatch: 
+        inputs:
+          environment:
+            description: "Select environment"
+            required: true
+            default: qa
+            type: choice
+            options:
+              - qa
+              - stage
+              - prod
+              - dev
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 jobs:
