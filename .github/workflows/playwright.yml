@@ -36,7 +36,7 @@ jobs:
     - name: Install xvfb
       run: sudo apt-get update && sudo apt-get install -y xvfb
     - name: Run Playwright tests
-      run: xvfb-run npx playwright test
+      run: npm run test:${{ github.event.inputs.environment }}
     - uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}
       with:
