@@ -2,7 +2,7 @@ import {test, expect} from "../../src/fixtures/pageFixture"
 import { randomName,randomEmail, setPassword } from "../../src/utils/unique_test_data_generator";
 
 
-test.only("Verify Register", async({page, loginPage, navbarPage, signupPage})=>{
+test("Verify Register", async({page, loginPage, navbarPage, signupPage})=>{
 await navbarPage.clickNavbarMenu("Signup");
 await signupPage.enterName(randomName);
 await signupPage.enterEmail(randomEmail);
