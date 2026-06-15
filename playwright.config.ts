@@ -34,6 +34,7 @@ export default defineConfig({
     screenshot: SCREENSHOT_MODE,
     video: VIDEO_MODE,
     trace: TRACE_MODE,
+    navigationTimeout: 60000,
     launchOptions: {
       args: ARGS,
       slowMo: SLOWMO
