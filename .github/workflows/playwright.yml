@@ -16,7 +16,6 @@ on:
             options:
               - qa
               - stage
-              - prod
               - dev
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
@@ -33,8 +32,8 @@ jobs:
       run: npm ci
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
-    - name: Install xvfb
-      run: sudo apt-get update && sudo apt-get install -y xvfb
+    # - name: Install xvfb
+    #   run: sudo apt-get update && sudo apt-get install -y xvfb
     - name: Run Playwright tests
       run: npm run test:${{ github.event.inputs.environment }}
     - uses: actions/upload-artifact@v4
