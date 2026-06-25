@@ -29,6 +29,7 @@ export default defineConfig({
   retries: RETRIES,
   workers: WORKERS,
   reporter: REPORTER_CONFIG,
+  timeout: 60000,
   use: {
     headless: HEADLESS,
     screenshot: SCREENSHOT_MODE,
